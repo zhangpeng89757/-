@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" class="black-theme dark">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>德阳市旌阳区知识产权工作态势大屏</title>
+    <script src="https://webapi.luokuang.com/maps?ak=EE16976215028261614D3B497BF255C4CD39D4C9463D79C60384GHWULVMU4209&v=2.6.5"></script>
+    <script>
+      // var APIURL = 'http://222.213.125.165:18443/screen/';
+      var APIURL = 'http://localhost:8484/'; // 本地
+      // var APIURL = 'http://test.ipdtfc.com/'; // 测试  TODO 改接口
+      //跳转连接
+      var LinkToUrl = 'http://222.213.125.165:18443/#/login';
+      //文件地址
+      var FileUrl = 'http://222.213.125.165:18080/';
+      //概览-高价值专利
+      var aogjzzlFileUrl = 'http://222.213.125.165:18443/#/patent';
+      //概览-右侧企业列表
+      var aoqylbFileUrl = 'http://222.213.125.165:18443/#/ap';
+      //有效注册商标量，查看更多跳转商标预警链接：
+      var warninfoUrl = 'http://222.213.125.165:18443/#/warn/warninfo';
+      //马德里查看更多
+      var mdlUrl = 'http://222.213.125.165:18443/#/trademark';
+      //企业服务
+      var qyfwlUrl = 'http://222.213.125.165:18443/#/enterprise';
+      //监管所
+      var jgsUrl = 'http://222.213.125.44:18885/cases/list/?sysFlag=LAW_ENFORCEMENT_SERVICE&platformCode=b3c4a9fc7c15d4b3fef4&orgId='
+
+      //重点商标预警监测
+      var jkresUrl = 'http://222.213.125.165:18443/#/jkres';
+
+      //侵权快处
+      var tortUrl = 'http://222.213.125.165:18443/#/tort';
+
+      //公共服务监测预警
+      var publicServiceUrl = 'http://222.213.125.165:18443/#/publicService';
+
+      //企业查询列表
+      var apUrl = 'http://222.213.125.165:18443/#/ap';
+
+    </script>
+  </head>
+  <body>
+    <div id="app"></div>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>

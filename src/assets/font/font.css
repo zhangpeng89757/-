@@ -1,0 +1,35 @@
+@font-face {
+    font-family: "ArialBold";
+    /* 引用字体包 */
+    src: url('Arial\ Bold.ttf'); 
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: "DDINBold";
+    /* 引用字体包 */
+    src: url('D-DIN-Bold.otf'); 
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: "HarmonyOSBold";
+    /* 引用字体包 */
+    src: url('HarmonyOS_Sans_SC_Bold.ttf'); 
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: "HarmonyOSRegular";
+    /* 引用字体包 */
+    src: url('HarmonyOS_Sans_SC_Regular.ttf'); 
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: "HarmonyOSMedium";
+    /* 引用字体包 */
+    src: url('HarmonyOS_Sans_SC_Medium.ttf'); 
+    font-weight: normal;
+    font-style: normal;
+}

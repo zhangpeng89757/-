@@ -1,0 +1,153 @@
+@import './font/font.css';
+html,body { 
+  min-width: 1920px;
+  margin: 0; padding: 0; display: flex; 
+  flex-direction: column; 
+  overflow: hidden; 
+  width: 100%; 
+  height: 100%; 
+  position: relative;
+  background-color: transparent; 
+  font-family: Noto Sans Kannada UI-Bold, Noto Sans Kannada UI;
+  font-family: 'HarmonyOSMedium', sans-serif;
+}
+#app { width: 100%;  height: 100%; flex: 1; display: flex; flex-direction: column; overflow: hidden; }
+.green {
+  text-decoration: none;
+  color: hsla(160, 100%, 37%, 1);
+  transition: 0.4s;
+}
+a {
+  background: transparent;
+  color: #fff;
+  text-decoration: none;
+}
+a:hover{background: transparent;}
+html.black-theme {
+  --el-disabled-bg-color: #151518;
+  --el-disabled-border-color: #37373A;
+  --el-bg-color: #28282A;
+  --el-text-color-primary: #28282A;
+  --el-text-color-primary: #28282A;
+  --el-select-input-color: #A8FAFF;
+  --el-border-color: #A8FAFF;
+  --el-bg-color-overlay: rgba(13, 48, 99, 1) !important;
+  --el-border-color-light: rgba(24, 64, 151, 0.63) !important;
+  --el-fill-color-light:#38549E !important;
+  --el-text-color-regular:#A8FAFF !important;
+  --color-text: #fff;
+  --el-table-text-color: #fff;
+  --mian-number-color: #5FFFE2;
+}
+* { user-select:none; }
+.el-popper__arrow { display: none; }
+.el-popper { border-radius: 0 !important; }
+.el-select-dropdown__item { border-bottom:  1px solid #38549E; }
+body .el-select-dropdown__list { margin: unset !important; }
+.el-popper.is-light { max-width: 20vW;}
+.background-image-box { background-size: 100% 100%; background-repeat: no-repeat; }
+
+.default-number-size { font-size: 0.8rem; font-weight: 600; color: #5FFFE2; }
+
+.map-info-window { padding: 1rem; color: #fff;}
+body .BMap_bubble_top { display: none; }
+body .BMap_bubble_pop { padding: 0 !important; border: 0!important; background-color: transparent!important; }
+body .BMap_bubble_pop img {display: none !important;}
+/**数字字体*/
+.number-font {
+  font-family: 'DDINBold';
+}
+/**标题字体*/
+.title-font {
+  font-family: 'HarmonyOSMedium';
+}
+/**1920*1020分辨率设置**/
+@media (max-width: 1920px) {
+  :root{
+    /**24号字体大小*/
+    --font24-size: 24px;
+    /**最大的字体大小*/
+    --large-font-size: 20px;
+    /**18号字体大小*/
+    --font18-size: 18px;
+    /**默认的字体大小*/
+    --default-font-size: 16px;
+    /**中等字体大小*/
+    --medium-font-size: 14px;
+    /**小标题字体大小*/
+    --small-font-size: 12px;
+  }
+  /**设置整体*/
+  html {
+    font-size: 16px;
+    max-height: 1080px; 
+    height: 1080px; 
+    min-height: 1080px; 
+    width: 1920px; 
+    min-width: 1920px; 
+    max-width: 1920px; 
+    -webkit-text-size-adjust:none; 
+  }
+  a {
+    color: #fff;
+  }
+  a:hover { background-color: transparent; }
+}
+@media all{
+  :root{
+    /**24号字体大小*/
+    --font24-size: 24px;
+    /**最大的字体大小*/
+    --large-font-size: 20px;
+    /**18号字体大小*/
+    --font18-size: 18px;
+    /**默认的字体大小*/
+    --default-font-size: 16px;
+    /**中等字体大小*/
+    --medium-font-size: 14px;
+    /**小标题字体大小*/
+    --small-font-size: 12px;
+  }
+  /**设置整体*/
+  html {
+    font-size: 16px;
+    font-weight: 400;
+    max-height: 1080px; 
+    height: 1080px; 
+    min-height: 1080px; 
+    width: 1920px; 
+    min-width: 1920px; 
+    max-width: 1920px; 
+    -webkit-text-size-adjust:none; 
+    margin: 0 auto;
+  }
+}
+.el-table .cell, .el-table .el-table__cell { font-weight: 500 !important; }
+.el-table .cell { padding: 0 6px !important; line-height: 34px !important; font-size: var(--medium-font-size); }
+
+/**模块背景色*/
+.model-backgroud {
+  background-color: #050457;
+}
+/**滚动条**/
+::-webkit-scrollbar-track {/*滑块以外背景*/
+  background-color: transparent;
+}
+::-webkit-scrollbar {/*滑块整体*/
+  width: 6px;
+  background-color: transparent;
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb {/*滑块*/
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 5px rgba(0,0,0,.2);
+  background-color: #306287;;
+}
+
+/**轮播播组件按钮**/
+body .el-carousel__arrow { border:  1px solid #1C6FAC; width: 18px; height: 18px; }
+body .el-carousel__arrow svg path { fill: #1C6FAC; }
+body .el-carousel__arrow--left { left: 0; }
+body .el-carousel__arrow--right { right: 0; }
+
+body .el-popper {z-index: 9999 !important;}
