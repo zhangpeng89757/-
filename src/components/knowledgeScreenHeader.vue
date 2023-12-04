@@ -67,6 +67,7 @@ onMounted(()=>{
 
 <style lang="less" scoped>
   .header {
+    pointer-events: none;
       z-index: 20;
       width: 100%;
       height: 130px;
@@ -93,7 +94,7 @@ onMounted(()=>{
     }
     .time{
       position: absolute;
-    right: -148px;
+    right: -192px;
     top: 0;
     z-index: 22;
     font-size: 14px;

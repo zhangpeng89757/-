@@ -1,23 +1,17 @@
 <template>
-    <div class="wrapper" v-if="showFlag" :style="{backgroundImage:'url('+ global.GetImages('sys-bg.jpg') +')'}">
-        <Header @changs="changs"></Header>
-        <div class="animation">
+    <div class="wrapper"  :style="{backgroundImage:'url('+ global.GetImages(showFlag ? 'sys-bg.jpg' : 'knowledge-bg.png') +')'}">
+        <Header @changs="changs" v-if="showFlag"></Header>
+      <knowledgeScreenHeader v-if="!showFlag"></knowledgeScreenHeader>
+        <div class="animation" >
             <router-view v-slot="{ Component }" name="mainRouter">
                 <transition :name="transitionName">
                     <component ref="Component" :is="Component" />
                 </transition>
             </router-view>
         </div>
-        <Menu ref="menu" class="menu" @play="play" @stop="stop"></Menu>
+        <!-- <Menu ref="menu" class="menu" @play="play" @stop="stop"></Menu> -->
     </div>
-    <div class="wrapper"  v-else>
-      <knowledgeScreenHeader></knowledgeScreenHeader>
-      <router-view v-slot="{ Component }" name="mainRouter">
-                <transition :name="transitionName">
-                    <component ref="Component" :is="Component" />
-                </transition>
-            </router-view>
-    </div>
+  
 </template>
 <script setup>
 import { RouterLink, useRouter,  } from 'vue-router';
@@ -152,4 +146,5 @@ const playCom = (res, index = 0) => {
     .slide-left-enter-to {
         transform: translateX(-100%);
     }
+   
 </style>
