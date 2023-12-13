@@ -5,7 +5,7 @@
     <div class="button">
       <button  class="btn" v-for="(item,index) in btn" :key="index" @click="handleClick(index,$e)" :id="'active'?index===btnIndex:false">{{item}}</button>
     </div>
-    <div style="width: 100%;height: 100%" >
+    <div style="width: 100%;height: 70%" >
       <el-table
           :data="scrollList"
           style="width: 100%"
@@ -16,7 +16,7 @@
         <el-table-column v-for="(item, index) in title"  :label="item" align="center"  :key="index" />
       </el-table>
         <Vue3SeamlessScroll id="box" :list="scrollList" class="seamless-warp scroll" :hover="true" :step="0.3">
-          <el-table :row-style="{ height: '34px' }" :height="680" :data="scrollList" :cell-style="{ textAlign: 'center',color:'#ffffff',border:0}" :header-cell-style="{textAlign: 'center',backgroundColor: '#051e46',border:0}" :show-header="false" stripe>
+          <el-table :row-style="{ height: '34px' }" :height="tableHeight" :data="scrollList" :cell-style="{ textAlign: 'center',color:'#ffffff',border:0}" :header-cell-style="{textAlign: 'center',backgroundColor: '#051e46',border:0}" :show-header="false" stripe>
             <el-table-column prop="year" show-overflow-tooltip/>
             <el-table-column prop="projectName" show-overflow-tooltip/>
             <el-table-column prop="projectUnit" show-overflow-tooltip/>
@@ -30,9 +30,6 @@
 </template>
 
 <style lang="scss" scoped>
- #box .el-table__row{
-  height: 100px;
- }
 .projectSubsidize{
   margin-top: 20px;
   height: 80%;
@@ -66,7 +63,7 @@
   height: 30px;
 }
 ::v-deep .seamless-warp {
-  height: 70%;
+  height: 60%;
   overflow: hidden;
 }
 ::v-deep .top .el-table__body-wrapper {
@@ -93,16 +90,16 @@ onMounted(async() => {
     List.value = a.data
     console.log(a.data)
     scrollList.value = List.value.totalList;
+    const rowlength = scrollList.value.length
+    console.log(rowlength)
+    tableHeight.value = rowlength*50
+    console.log(tableHeight.value)
   } catch (error) {
     console.error(error);
   } finally {
   }
 });
 onUpdated(()=>{
-  // const rowlength = scrollList.value.length
-  // console.log(rowlength)
-  // tableHeight.value = rowlength*34
-  // console.log(tableHeight.value)
 })
 const title = ref(["年度","项目名称","项目单位","项目金额","知识产权类型","验收结果"])
 // 子传父
@@ -121,12 +118,28 @@ function handleClick(index,e) {
   console.log(index,btnIndex.value)
   if(index === 0){
     scrollList.value = List.value.totalList
+    const rowlength = scrollList.value.length
+    console.log(rowlength)
+    tableHeight.value = rowlength*50
+    console.log(tableHeight.value)
   }else if (index === 1) {
     scrollList.value = List.value.applyList
+    const rowlength = scrollList.value.length
+    console.log(rowlength)
+    tableHeight.value = rowlength*50
+    console.log(tableHeight.value)
   }else if (index === 2) {
     scrollList.value = List.value.implementList
+    const rowlength = scrollList.value.length
+    console.log(rowlength)
+    tableHeight.value = rowlength*50
+    console.log(tableHeight.value)
   }else if (index === 3) {
     scrollList.value = List.value.completedList
+    const rowlength = scrollList.value.length
+    console.log(rowlength)
+    tableHeight.value = rowlength*50
+    console.log(tableHeight.value)
   }
 }
 </script>

@@ -70,19 +70,18 @@ const viewObj = reactive({
 <style scoped>
 .KnowledgeWarning{
   width: 50%;
-  position: absolute;
-  left: 50%;
-  height: 50%;
+  height: 100%;
 }
 .zscqqqyj-box {
-    height: 50%;
+    height: 100%;
+    width: 100%;
 }
 
 .zscqqqyj-box {
     /* display: flex;
     flex-direction: column;
     position: relative; */
-    padding: 0 20px 20px;
+    padding: 0 0 20px 0;
     box-sizing: border-box;
 }
 
@@ -115,7 +114,7 @@ const viewObj = reactive({
     display: flex;
     flex-wrap: wrap;
     height:  calc(100% - 40px);
-    /* width: 100%; */
+    width: 100%;
 }
 
 .zscqqqyj-content-item {
