@@ -3,7 +3,7 @@
     <div class="keyEnterprises-box-title background-image-box">
         <knowledgeTitle title="知识产权重点企业展示" text="家"></knowledgeTitle>
       <div class="box">
-        <el-image class="KeyEnterprises-background" :src="GetPublicSource('enterprises-background.png')"></el-image>
+        <el-image style="width: 90%; height: 100%;" class="KeyEnterprises-background" :src="GetPublicSource('enterprises-background.png')"></el-image>
         <div class="enterprises-one">
             <el-image class="enterprises" :src="GetPublicSource('enterprisestittle.png')"></el-image>
             <div class="word-one" style="width: 180px;">知识产权优势企业
