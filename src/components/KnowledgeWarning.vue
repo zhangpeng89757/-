@@ -70,7 +70,7 @@ const viewObj = reactive({
 
 </script>
 <style scoped>
-KnowledgeWarning{
+.KnowledgeWarning{
   width: 50%;
 }
 .zscqqqyj-box {
