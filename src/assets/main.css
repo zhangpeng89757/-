@@ -125,10 +125,10 @@ body .BMap_bubble_pop img {display: none !important;}
 .el-table .cell, .el-table .el-table__cell { font-weight: 500 !important; }
 .el-table .cell { padding: 0 6px !important; line-height: 34px !important; font-size: var(--medium-font-size); }
 
-/**模块背景色*/
+/**模块背景色**/
 .model-backgroud {
   background-color: #050457;
-}
+} 
 /**滚动条**/
 ::-webkit-scrollbar-track {/*滑块以外背景*/
   background-color: transparent;
