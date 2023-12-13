@@ -71,7 +71,7 @@ onMounted(()=>{
 </script>
 <style scoped>
 .seamless-warp {
-    flex: 1;
+    height: 60%;
     overflow: hidden;
 }
 .scroll { overflow: hidden; flex: 1; }

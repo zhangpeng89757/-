@@ -21,7 +21,8 @@
             ref="refScroll" class="seamless-warp scroll"
             :list="viewObject.data" :limitScrollNum="limitScrollNum" :hover="true" :step="0.3" :style="{height: `${height}px`}"
         >
-            <el-table 
+            <el-table
+                ref="table"
                 class="scroll-table"
                 :data="viewObject.data"
                 :show-header="false"
@@ -101,9 +102,9 @@ let limitScrollNum = 4
 
 const initData = () =>{
     viewObject.showScroll = false;
-    if(loadNumber == 0 && viewObject.data?.length > 0) {
+    if(loadNumber === 0 && viewObject.data?.length > 0) {
         viewObject.loading = false;
-    } else if (loadNumber == 1) {
+    } else if (loadNumber === 1) {
         viewObject.loading = false;
     }
     loadNumber++;

@@ -15,16 +15,16 @@
       >
         <el-table-column v-for="(item, index) in title"  :label="item" align="center"  :key="index" />
       </el-table>
-      <Vue3SeamlessScroll :list="scrollList" class="seamless-warp scroll" :hover="true" :step="0.3">
-        <el-table class="bottom" @row-click="rowClick" :data="scrollList" :cell-style="{ textAlign: 'center',color:'#ffffff',border:0}" :header-cell-style="{textAlign: 'center',backgroundColor: '#051e46',border:0}" :show-header="false" stripe>
-          <el-table-column prop="year" show-overflow-tooltip/>
-          <el-table-column prop="projectName" show-overflow-tooltip/>
-          <el-table-column prop="projectUnit" show-overflow-tooltip/>
-          <el-table-column prop="money" show-overflow-tooltip/>
-          <el-table-column prop="type" show-overflow-tooltip/>
-          <el-table-column prop="conclusion" show-overflow-tooltip/>
-        </el-table>
-      </Vue3SeamlessScroll>
+        <Vue3SeamlessScroll  :list="scrollList" class="seamless-warp scroll" :hover="true" :step="0.3">
+          <el-table id="box" :height="tableHeight" :data="scrollList" :cell-style="{ textAlign: 'center',color:'#ffffff',border:0}" :header-cell-style="{textAlign: 'center',backgroundColor: '#051e46',border:0}" :show-header="false" stripe>
+            <el-table-column prop="year" show-overflow-tooltip/>
+            <el-table-column prop="projectName" show-overflow-tooltip/>
+            <el-table-column prop="projectUnit" show-overflow-tooltip/>
+            <el-table-column prop="money" show-overflow-tooltip/>
+            <el-table-column prop="type" show-overflow-tooltip/>
+            <el-table-column prop="conclusion" show-overflow-tooltip/>
+          </el-table>
+        </Vue3SeamlessScroll>
     </div>
 
   </div>
@@ -78,14 +78,16 @@
 }
 </style>
 <script setup>
-
 const { proxy } = getCurrentInstance();
 import KnowledgeTitle from "./knowledgeTitle.vue";
-import {getCurrentInstance, reactive, ref,defineProps} from 'vue'
+import {getCurrentInstance,ref} from 'vue'
 import { Vue3SeamlessScroll } from "vue3-seamless-scroll";
 import { onMounted } from 'vue';
 onMounted(() => {
   scrollList.value = List.value.totalList;
+  const Height= document.getElementById('box');
+  console.log(Height.clientHeight)
+  tableHeight.value = Height.clientHeight
 });
 const title = ref(["年度","项目名称","项目单位","项目金额","知识产权类型","验收结果"])
 // 子传父
@@ -93,6 +95,7 @@ const rowClick = (row, column, event) => {
   console.log(row,column,event)
   proxy.$emit("rowClick",row, column, event)
 }
+const tableHeight = ref(null)
 const scrollList = ref([])
 const btnIndex = ref(0)
 const btn = ref(["全部","申请中","实施中","已完成"])
@@ -101,7 +104,7 @@ const List=ref({
     {
       "level": "省级",
       "year": "2019",
-      "projectName": "国家知识产权优势企业培育项目",
+      "projectName": "1",
       "projectUnit": "德阳瑞能电力科技有限公司",
       "money": 20,
       "type": "其它",
@@ -111,7 +114,67 @@ const List=ref({
     {
       "level": "省级",
       "year": "2019",
-      "projectName": "国家知识产权优势企业培育项目",
+      "projectName": "2",
+      "projectUnit": "德阳瑞能电力科技有限公司",
+      "money": 20,
+      "type": "其它",
+      "conclusion": "通过验收",
+      "content": "项目获得资金20万元，自筹金额20万元，需要完成“1.公司知识产权拥有量达到45项，开发出有自主产权的产品6项以上；2.公司知识产权转化运用能力提高；3.增强依法保护知识产权意识；4.贯彻《企业知识产权管理规范》，实现公司知识产权管理的标准化和制度化；5.利用公司产业链上企业进行知识产权整合；6.加强知识产权的综合运用；7.大力提高公司知识产权的经济效益和社会效益。对照目标，实际完成情况是1.公司知识产权数量达到并超过了目标要求；2.从2019年至2020年公司有超过4项专利实现了产品化；3.公司配置专人从事专利等相关工作，重视每一个新研发产品或方案的专利申请。4.公司贯彻《企业知识产权管理规范》，配置专职管理人员，设立知识产权专项经费，不断完善知识产权管理制度，将知识产品工作纳入研发、生产等各个环节；5.公司实施完成了产业链上企业的知识产权整合工作，确定了系列产品的产权布局。6.2019年12月建立了知识产权检索、风险管理等数据库。7.2020年2月完成了对前期知识产权维权产品的统计，通过优化知识产权组成结构，提高产品市场推广范围。总体来说目前项目已通过验收，全部完成了合同要求的计定目标。"
+    },
+    {
+      "level": "省级",
+      "year": "2019",
+      "projectName": "3",
+      "projectUnit": "德阳瑞能电力科技有限公司",
+      "money": 20,
+      "type": "其它",
+      "conclusion": "通过验收",
+      "content": "项目获得资金20万元，自筹金额20万元，需要完成“1.公司知识产权拥有量达到45项，开发出有自主产权的产品6项以上；2.公司知识产权转化运用能力提高；3.增强依法保护知识产权意识；4.贯彻《企业知识产权管理规范》，实现公司知识产权管理的标准化和制度化；5.利用公司产业链上企业进行知识产权整合；6.加强知识产权的综合运用；7.大力提高公司知识产权的经济效益和社会效益。对照目标，实际完成情况是1.公司知识产权数量达到并超过了目标要求；2.从2019年至2020年公司有超过4项专利实现了产品化；3.公司配置专人从事专利等相关工作，重视每一个新研发产品或方案的专利申请。4.公司贯彻《企业知识产权管理规范》，配置专职管理人员，设立知识产权专项经费，不断完善知识产权管理制度，将知识产品工作纳入研发、生产等各个环节；5.公司实施完成了产业链上企业的知识产权整合工作，确定了系列产品的产权布局。6.2019年12月建立了知识产权检索、风险管理等数据库。7.2020年2月完成了对前期知识产权维权产品的统计，通过优化知识产权组成结构，提高产品市场推广范围。总体来说目前项目已通过验收，全部完成了合同要求的计定目标。"
+    },
+    {
+      "level": "省级",
+      "year": "2019",
+      "projectName": "4",
+      "projectUnit": "德阳瑞能电力科技有限公司",
+      "money": 20,
+      "type": "其它",
+      "conclusion": "通过验收",
+      "content": "项目获得资金20万元，自筹金额20万元，需要完成“1.公司知识产权拥有量达到45项，开发出有自主产权的产品6项以上；2.公司知识产权转化运用能力提高；3.增强依法保护知识产权意识；4.贯彻《企业知识产权管理规范》，实现公司知识产权管理的标准化和制度化；5.利用公司产业链上企业进行知识产权整合；6.加强知识产权的综合运用；7.大力提高公司知识产权的经济效益和社会效益。对照目标，实际完成情况是1.公司知识产权数量达到并超过了目标要求；2.从2019年至2020年公司有超过4项专利实现了产品化；3.公司配置专人从事专利等相关工作，重视每一个新研发产品或方案的专利申请。4.公司贯彻《企业知识产权管理规范》，配置专职管理人员，设立知识产权专项经费，不断完善知识产权管理制度，将知识产品工作纳入研发、生产等各个环节；5.公司实施完成了产业链上企业的知识产权整合工作，确定了系列产品的产权布局。6.2019年12月建立了知识产权检索、风险管理等数据库。7.2020年2月完成了对前期知识产权维权产品的统计，通过优化知识产权组成结构，提高产品市场推广范围。总体来说目前项目已通过验收，全部完成了合同要求的计定目标。"
+    },
+    {
+      "level": "省级",
+      "year": "2019",
+      "projectName": "5",
+      "projectUnit": "德阳瑞能电力科技有限公司",
+      "money": 20,
+      "type": "其它",
+      "conclusion": "通过验收",
+      "content": "项目获得资金20万元，自筹金额20万元，需要完成“1.公司知识产权拥有量达到45项，开发出有自主产权的产品6项以上；2.公司知识产权转化运用能力提高；3.增强依法保护知识产权意识；4.贯彻《企业知识产权管理规范》，实现公司知识产权管理的标准化和制度化；5.利用公司产业链上企业进行知识产权整合；6.加强知识产权的综合运用；7.大力提高公司知识产权的经济效益和社会效益。对照目标，实际完成情况是1.公司知识产权数量达到并超过了目标要求；2.从2019年至2020年公司有超过4项专利实现了产品化；3.公司配置专人从事专利等相关工作，重视每一个新研发产品或方案的专利申请。4.公司贯彻《企业知识产权管理规范》，配置专职管理人员，设立知识产权专项经费，不断完善知识产权管理制度，将知识产品工作纳入研发、生产等各个环节；5.公司实施完成了产业链上企业的知识产权整合工作，确定了系列产品的产权布局。6.2019年12月建立了知识产权检索、风险管理等数据库。7.2020年2月完成了对前期知识产权维权产品的统计，通过优化知识产权组成结构，提高产品市场推广范围。总体来说目前项目已通过验收，全部完成了合同要求的计定目标。"
+    },
+    {
+      "level": "省级",
+      "year": "2019",
+      "projectName": "6",
+      "projectUnit": "德阳瑞能电力科技有限公司",
+      "money": 20,
+      "type": "其它",
+      "conclusion": "通过验收",
+      "content": "项目获得资金20万元，自筹金额20万元，需要完成“1.公司知识产权拥有量达到45项，开发出有自主产权的产品6项以上；2.公司知识产权转化运用能力提高；3.增强依法保护知识产权意识；4.贯彻《企业知识产权管理规范》，实现公司知识产权管理的标准化和制度化；5.利用公司产业链上企业进行知识产权整合；6.加强知识产权的综合运用；7.大力提高公司知识产权的经济效益和社会效益。对照目标，实际完成情况是1.公司知识产权数量达到并超过了目标要求；2.从2019年至2020年公司有超过4项专利实现了产品化；3.公司配置专人从事专利等相关工作，重视每一个新研发产品或方案的专利申请。4.公司贯彻《企业知识产权管理规范》，配置专职管理人员，设立知识产权专项经费，不断完善知识产权管理制度，将知识产品工作纳入研发、生产等各个环节；5.公司实施完成了产业链上企业的知识产权整合工作，确定了系列产品的产权布局。6.2019年12月建立了知识产权检索、风险管理等数据库。7.2020年2月完成了对前期知识产权维权产品的统计，通过优化知识产权组成结构，提高产品市场推广范围。总体来说目前项目已通过验收，全部完成了合同要求的计定目标。"
+    },
+    {
+      "level": "省级",
+      "year": "2019",
+      "projectName": "7",
+      "projectUnit": "德阳瑞能电力科技有限公司",
+      "money": 20,
+      "type": "其它",
+      "conclusion": "通过验收",
+      "content": "项目获得资金20万元，自筹金额20万元，需要完成“1.公司知识产权拥有量达到45项，开发出有自主产权的产品6项以上；2.公司知识产权转化运用能力提高；3.增强依法保护知识产权意识；4.贯彻《企业知识产权管理规范》，实现公司知识产权管理的标准化和制度化；5.利用公司产业链上企业进行知识产权整合；6.加强知识产权的综合运用；7.大力提高公司知识产权的经济效益和社会效益。对照目标，实际完成情况是1.公司知识产权数量达到并超过了目标要求；2.从2019年至2020年公司有超过4项专利实现了产品化；3.公司配置专人从事专利等相关工作，重视每一个新研发产品或方案的专利申请。4.公司贯彻《企业知识产权管理规范》，配置专职管理人员，设立知识产权专项经费，不断完善知识产权管理制度，将知识产品工作纳入研发、生产等各个环节；5.公司实施完成了产业链上企业的知识产权整合工作，确定了系列产品的产权布局。6.2019年12月建立了知识产权检索、风险管理等数据库。7.2020年2月完成了对前期知识产权维权产品的统计，通过优化知识产权组成结构，提高产品市场推广范围。总体来说目前项目已通过验收，全部完成了合同要求的计定目标。"
+    },
+    {
+      "level": "省级",
+      "year": "2019",
+      "projectName": "8",
       "projectUnit": "德阳瑞能电力科技有限公司",
       "money": 20,
       "type": "其它",
