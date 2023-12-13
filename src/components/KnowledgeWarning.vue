@@ -12,27 +12,31 @@
                         <div class="number-font">{{ viewObj.monitorWarning }}</div>
                         <div>重点品牌监测预警</div>
                     </div>
+                    <el-image style="width: 15%" :src="GetPublicSource('arrowhead.png')"></el-image>
                 </div>
                 <div class="zscqqqyj-content-item">
                     <el-image class="zscqqqyj-content-item-icon" :src="GetPublicSource('warning-red.png')"></el-image>
                     <div class="zscqqqyj-content-item-content">
                         <div class="number-font">{{ viewObj.infringementWarning }}</div>
-                        <div>重点企业字号品牌保护预警</div>
+                        <div style="width: 120px;">重点企业字号品牌保护预警</div>
                     </div>
+                    <el-image style="width: 15%" :src="GetPublicSource('arrowhead.png')"></el-image>
                 </div>
                 <div class="zscqqqyj-content-item">
                     <el-image class="zscqqqyj-content-item-icon" :src="GetPublicSource('warning-red.png')"></el-image>
                     <div class="zscqqqyj-content-item-content">
                         <div class="number-font">{{ viewObj.tmEncroachWarning }}</div>
-                        <div >小微企业商标“清零行动”提醒</div>
+                        <div  style="width: 120px;">小微企业商标“清零行动”提醒</div>
                     </div>
+                    <el-image style="width: 15%"  :src="GetPublicSource('arrowhead.png')"></el-image>
                 </div>
                 <div class="zscqqqyj-content-item">
                     <el-image class="zscqqqyj-content-item-icon" :src="GetPublicSource('warning-red.png')"></el-image>
                     <div class="zscqqqyj-content-item-content">
                         <div class="number-font">{{ viewObj.brandProtectionWarning }}</div>
-                        <div>科技型企业专利“清零行动”提醒</div>
+                        <div  style="width: 120px;">科技型企业专利“清零行动”提醒</div>
                     </div>
+                    <el-image style="width: 15%"  :src="GetPublicSource('arrowhead.png')"></el-image>
                 </div>
                 <div class="zscqqqyj-content-item">
                     <el-image class="zscqqqyj-content-item-icon" :src="GetPublicSource('warning-red.png')"></el-image>
@@ -40,13 +44,15 @@
                         <div class="number-font">{{ viewObj.tmClearingPrompt }}</div>
                         <div>商标续展提醒</div>
                     </div>
+                    <el-image style="width: 15%" :src="GetPublicSource('arrowhead.png')"></el-image>
                 </div>
                 <div class="zscqqqyj-content-item">
                     <el-image class="zscqqqyj-content-item-icon" :src="GetPublicSource('warning-red.png')"></el-image>
                     <div class="zscqqqyj-content-item-content">
                         <div class="number-font">{{ viewObj.ptClearingPrompt }}</div>
-                        <div>专利续费提醒 </div>
+                        <div>专利续费提醒</div>
                     </div>
+                    <el-image style="width: 15%" :src="GetPublicSource('arrowhead.png')"></el-image>
                 </div>
             </div>
         </div>

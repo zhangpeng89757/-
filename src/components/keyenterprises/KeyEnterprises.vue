@@ -3,7 +3,7 @@
     <div class="keyEnterprises-box-title background-image-box">
         <knowledgeTitle title="知识产权重点企业展示" text="家"></knowledgeTitle>
       <div class="box">
-        <el-image style="width: 90%; height: 100%;" class="KeyEnterprises-background" :src="GetPublicSource('enterprises-background.png')"></el-image>
+        <el-image style="width: 80%; height: 100%;" class="KeyEnterprises-background" :src="GetPublicSource('enterprises-background.png')"></el-image>
         <div class="enterprises-one">
             <el-image class="enterprises" :src="GetPublicSource('enterprisestittle.png')"></el-image>
             <div class="word-one" style="width: 180px;">知识产权优势企业
@@ -82,7 +82,7 @@ const viewObj = reactive({
 .enterprises-two {
     position: absolute;
     top: 15%;
-    left: 60%;
+    left: 50%;
 }
 
 .word-two {
@@ -94,7 +94,7 @@ const viewObj = reactive({
 
 .enterprises-three {
     position: absolute;
-    top: 40%;
+    top: 50%;
 }
 
 .word-three {
@@ -106,8 +106,8 @@ const viewObj = reactive({
 
 .enterprises-four {
     position: absolute;
-    top: 40%;
-    right: 10%;
+    top: 50%;
+    right: 30%;
 }
 
 .word-four {
@@ -119,8 +119,8 @@ const viewObj = reactive({
 
 .enterprises-five {
     position: absolute;
-    bottom: 30%;
-    left: 40%;
+    bottom: 10%;
+    left: 35%;
 }
 
 .word-five {
