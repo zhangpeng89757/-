@@ -41,7 +41,7 @@ import { GetPublicSource } from '../../SystemCom/GetImages'
 }
 .enterprises-one {
     position: absolute;
-    top: 20%;
+    bottom: 3%;
 }
 
 .word-one {

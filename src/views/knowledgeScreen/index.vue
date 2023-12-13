@@ -6,8 +6,8 @@
     <div class="box_min"></div>
     <div class="box_right">
       <div style="display: flex">
-          <KeyEnterprises></KeyEnterprises>
-          <KnowledgeWarning></KnowledgeWarning>
+          <keyEnterprises></keyEnterprises>
+          <knowledgeWarning></knowledgeWarning>
       </div>
       <div style="height: 50%">
         <enterpriseServices></enterpriseServices>
@@ -18,8 +18,8 @@
 </template>
 <script setup lang="ts">
 // import knowledgeTitle from '@/components/knowledgeTitle.vue'
-import KnowledgeWarning from '../../components/KnowledgeWarning.vue';
-import KeyEnterprises from '../../components/KeyEnterprises/KeyEnterprises.vue';
+import knowledgeWarning from '../../components/KnowledgeWarning.vue'
+import keyEnterprises from '../../components/keyenterprises/KeyEnterprises.vue'
 import projectSubsidize from  '../../components/projectSubsidize.vue'
 import enterpriseServices from  '../../components/enterpriseServices.vue'
 // let test = "知识大屏"

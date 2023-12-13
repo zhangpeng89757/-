@@ -24,32 +24,30 @@
                     <el-image class="zscqqqyj-content-item-icon" :src="GetPublicSource('warning-red.png')"></el-image>
                     <div class="zscqqqyj-content-item-content">
                         <div class="number-font">{{ viewObj.tmEncroachWarning }}</div>
-                        <div style="width: 65px">重点品牌检测预警</div>
+                        <div >重点品牌检测预警</div>
                     </div>
                 </div>
                 <div class="zscqqqyj-content-item">
                     <el-image class="zscqqqyj-content-item-icon" :src="GetPublicSource('warning-yellow.png')"></el-image>
                     <div class="zscqqqyj-content-item-content">
                         <div class="number-font">{{ viewObj.brandProtectionWarning }}</div>
-                        <div style="width: 80px">重点企业字号品牌保护预警</div>
+                        <div>重点企业字号品牌保护预警</div>
                     </div>
                 </div>
                 <div class="zscqqqyj-content-item">
                     <el-image class="zscqqqyj-content-item-icon" :src="GetPublicSource('warning-yellow.png')"></el-image>
                     <div class="zscqqqyj-content-item-content">
                         <div class="number-font">{{ viewObj.tmClearingPrompt }}</div>
-                        <div style="width: 80px">小微企业商标“清零行动”提醒</div>
+                        <div>小微企业商标“清零行动”提醒</div>
                     </div>
                 </div>
                 <div class="zscqqqyj-content-item">
                     <el-image class="zscqqqyj-content-item-icon" :src="GetPublicSource('warning-yellow.png')"></el-image>
                     <div class="zscqqqyj-content-item-content">
                         <div class="number-font">{{ viewObj.ptClearingPrompt }}</div>
-                        <div style="width: 80px;">科技型企业专利“清零行动”提醒 </div>
+                        <div>科技型企业专利“清零行动”提醒 </div>
                     </div>
                 </div>
-            </div>
-            <div style="display: flex; flex-direction: column; width: 100%; height: 100%;">
             </div>
         </div>
     </div>
@@ -72,15 +70,18 @@ const viewObj = reactive({
 <style scoped>
 .KnowledgeWarning{
   width: 50%;
+  position: absolute;
+  left: 50%;
+  height: 50%;
 }
 .zscqqqyj-box {
     height: 50%;
 }
 
 .zscqqqyj-box {
-    display: flex;
+    /* display: flex;
     flex-direction: column;
-    position: relative;
+    position: relative; */
     padding: 0 20px 20px;
     box-sizing: border-box;
 }
@@ -105,38 +106,43 @@ const viewObj = reactive({
 }
 
 .zscqqqyj-content-box {
-    flex: 1;
-    display: grid;
+    /* flex: 1; */
+    /* display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr); */
     gap: 7px;
     margin-top: 14px;
+    display: flex;
+    flex-wrap: wrap;
+    height:  calc(100% - 40px);
+    /* width: 100%; */
 }
 
 .zscqqqyj-content-item {
     display: flex;
     align-items: center;
-    height: 95px;
     padding: 10px 0 15px 21px;
     box-sizing: border-box;
     cursor: pointer;
+    width: calc(50% - 10px);
+    height:  calc(33% - 10px);
 }
 
 .zscqqqyj-content-item {
     background: #071b3c;
 }
 
-.zscqqqyj-content-box .zscqqqyj-content-item:nth-child(2n) {
+/* .zscqqqyj-content-box .zscqqqyj-content-item:nth-child(2n) {
     padding-left: 10px;
-}
+} */
 
 .zscqqqyj-content-item-icon {
     width: 32px;
     height: 32px;
 }
-.zscqqqyj-content-item{
+/* .zscqqqyj-content-item{
     width: 150px;
-}
+} */
 .zscqqqyj-content-item-content {
     flex: 1;
     display: flex;
