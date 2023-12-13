@@ -5,12 +5,14 @@
     </div>
     <div class="box_min"></div>
     <div class="box_right">
-      <div style="display: flex;">
-        <KeyEnterprises></KeyEnterprises>
-        <KnowledgeWarning></KnowledgeWarning>
+      <div style="display: flex">
+          <KeyEnterprises></KeyEnterprises>
+          <KnowledgeWarning></KnowledgeWarning>
       </div>
-       
-      
+      <div style="height: 50%">
+        <enterpriseServices></enterpriseServices>
+        <projectSubsidize></projectSubsidize>
+      </div>
     </div>
   </div>
 </template>
@@ -18,6 +20,8 @@
 // import knowledgeTitle from '@/components/knowledgeTitle.vue'
 import KnowledgeWarning from '../../components/KnowledgeWarning.vue';
 import KeyEnterprises from '../../components/KeyEnterprises/KeyEnterprises.vue';
+import projectSubsidize from  '../../components/projectSubsidize.vue'
+import enterpriseServices from  '../../components/enterpriseServices.vue'
 // let test = "知识大屏"
 </script>
 <style lang="less" scoped>

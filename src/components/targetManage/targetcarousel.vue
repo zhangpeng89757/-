@@ -70,10 +70,10 @@ onMounted(()=>{
 })
 </script>
 <style scoped>
-.seamless-warp {
-    height: 60%;
-    overflow: hidden;
-}
+//.seamless-warp {
+//    height: 100%;
+//    overflow: hidden;
+//}
 .scroll { overflow: hidden; flex: 1; }
 .targetcarousel-box { position: relative; display: flex; flex-direction: column; overflow: hidden; background-image: linear-gradient(to bottom, rgba(21, 20, 92, 0.5), rgba(21, 20, 92, 0)); }
 .targetcarousel-box-title { 
