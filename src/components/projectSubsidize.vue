@@ -16,7 +16,7 @@
         <el-table-column v-for="(item, index) in title"  :label="item" align="center"  :key="index" />
       </el-table>
         <Vue3SeamlessScroll id="box" :list="scrollList" class="seamless-warp scroll" :hover="true" :step="0.3">
-          <el-table :row-style="{ height: '34px' }" :height="tableHeight" :data="scrollList" :cell-style="{ textAlign: 'center',color:'#ffffff',border:0}" :header-cell-style="{textAlign: 'center',backgroundColor: '#051e46',border:0}" :show-header="false" stripe>
+          <el-table :row-style="{ height: '34px' }" :height="680" :data="scrollList" :cell-style="{ textAlign: 'center',color:'#ffffff',border:0}" :header-cell-style="{textAlign: 'center',backgroundColor: '#051e46',border:0}" :show-header="false" stripe>
             <el-table-column prop="year" show-overflow-tooltip/>
             <el-table-column prop="projectName" show-overflow-tooltip/>
             <el-table-column prop="projectUnit" show-overflow-tooltip/>
@@ -99,10 +99,10 @@ onMounted(async() => {
   }
 });
 onUpdated(()=>{
-  const rowlength = scrollList.value.length
-  console.log(rowlength)
-  tableHeight.value = rowlength*34
-  console.log(tableHeight.value)
+  // const rowlength = scrollList.value.length
+  // console.log(rowlength)
+  // tableHeight.value = rowlength*34
+  // console.log(tableHeight.value)
 })
 const title = ref(["年度","项目名称","项目单位","项目金额","知识产权类型","验收结果"])
 // 子传父
