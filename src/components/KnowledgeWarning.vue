@@ -1,6 +1,6 @@
 <!--知识产权预警-->
 <template>
-    <div style="width: 50%;">
+    <div class="KnowledgeWarning">
         <div class="zscqqqyj-box">
             <div class="zscqqqyj-box-title background-image-box">
                 <knowledgeTitle title="知识产权预警" text="家"></knowledgeTitle>
@@ -70,6 +70,9 @@ const viewObj = reactive({
 
 </script>
 <style scoped>
+KnowledgeWarning{
+  width: 50%;
+}
 .zscqqqyj-box {
     height: 50%;
 }
