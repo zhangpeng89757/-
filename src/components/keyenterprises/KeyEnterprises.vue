@@ -2,6 +2,7 @@
 <template>
     <div class="keyEnterprises-box-title background-image-box">
         <knowledgeTitle title="知识产权重点企业展示" text="家"></knowledgeTitle>
+      <div class="box">
         <el-image class="KeyEnterprises-background" :src="GetPublicSource('enterprises-background.png')"></el-image>
         <div class="enterprises-one">
             <el-image class="enterprises" :src="GetPublicSource('enterprisestittle.png')"></el-image>
@@ -34,6 +35,8 @@
             </div>
 
         </div>
+      </div>
+
     </div>
 </template>
 <script setup>
@@ -52,9 +55,12 @@ const viewObj = reactive({
 <style scoped>
 .keyEnterprises-box-title {
     width: 50%;
-    position: relative;
+    height: 100%;
 }
-
+.box{
+  position: relative;
+  height: calc(100% - 40px);
+}
 .enterprises {
     width: 70px;
     height: 40px;
@@ -62,8 +68,8 @@ const viewObj = reactive({
 
 .enterprises-one {
     position: absolute;
-    top: 25%;
-    left: 10%;
+    top: 15%;
+    left:15%;
 }
 
 .word-one {
@@ -75,7 +81,7 @@ const viewObj = reactive({
 
 .enterprises-two {
     position: absolute;
-    top: 25%;
+    top: 15%;
     left: 60%;
 }
 
@@ -88,7 +94,7 @@ const viewObj = reactive({
 
 .enterprises-three {
     position: absolute;
-    top: 50%;
+    top: 40%;
 }
 
 .word-three {
@@ -100,7 +106,7 @@ const viewObj = reactive({
 
 .enterprises-four {
     position: absolute;
-    top: 50%;
+    top: 40%;
     right: 10%;
 }
 
@@ -113,7 +119,7 @@ const viewObj = reactive({
 
 .enterprises-five {
     position: absolute;
-    bottom: 10%;
+    bottom: 30%;
     left: 40%;
 }
 

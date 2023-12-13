@@ -10,42 +10,42 @@
                     <el-image class="zscqqqyj-content-item-icon" :src="GetPublicSource('warning-red.png')"></el-image>
                     <div class="zscqqqyj-content-item-content">
                         <div class="number-font">{{ viewObj.monitorWarning }}</div>
-                        <div style="width: 80px">商标续展提醒</div>
+                        <div>重点品牌监测预警</div>
                     </div>
                 </div>
                 <div class="zscqqqyj-content-item">
                     <el-image class="zscqqqyj-content-item-icon" :src="GetPublicSource('warning-red.png')"></el-image>
                     <div class="zscqqqyj-content-item-content">
                         <div class="number-font">{{ viewObj.infringementWarning }}</div>
-                        <div style="width: 80px">专利续费提醒</div>
+                        <div>重点企业字号品牌保护预警</div>
                     </div>
                 </div>
                 <div class="zscqqqyj-content-item">
                     <el-image class="zscqqqyj-content-item-icon" :src="GetPublicSource('warning-red.png')"></el-image>
                     <div class="zscqqqyj-content-item-content">
                         <div class="number-font">{{ viewObj.tmEncroachWarning }}</div>
-                        <div >重点品牌检测预警</div>
+                        <div >小微企业商标“清零行动”提醒</div>
                     </div>
                 </div>
                 <div class="zscqqqyj-content-item">
-                    <el-image class="zscqqqyj-content-item-icon" :src="GetPublicSource('warning-yellow.png')"></el-image>
+                    <el-image class="zscqqqyj-content-item-icon" :src="GetPublicSource('warning-red.png')"></el-image>
                     <div class="zscqqqyj-content-item-content">
                         <div class="number-font">{{ viewObj.brandProtectionWarning }}</div>
-                        <div>重点企业字号品牌保护预警</div>
+                        <div>科技型企业专利“清零行动”提醒</div>
                     </div>
                 </div>
                 <div class="zscqqqyj-content-item">
-                    <el-image class="zscqqqyj-content-item-icon" :src="GetPublicSource('warning-yellow.png')"></el-image>
+                    <el-image class="zscqqqyj-content-item-icon" :src="GetPublicSource('warning-red.png')"></el-image>
                     <div class="zscqqqyj-content-item-content">
                         <div class="number-font">{{ viewObj.tmClearingPrompt }}</div>
-                        <div>小微企业商标“清零行动”提醒</div>
+                        <div>商标续展提醒</div>
                     </div>
                 </div>
                 <div class="zscqqqyj-content-item">
-                    <el-image class="zscqqqyj-content-item-icon" :src="GetPublicSource('warning-yellow.png')"></el-image>
+                    <el-image class="zscqqqyj-content-item-icon" :src="GetPublicSource('warning-red.png')"></el-image>
                     <div class="zscqqqyj-content-item-content">
                         <div class="number-font">{{ viewObj.ptClearingPrompt }}</div>
-                        <div>科技型企业专利“清零行动”提醒 </div>
+                        <div>专利续费提醒 </div>
                     </div>
                 </div>
             </div>
@@ -70,19 +70,15 @@ const viewObj = reactive({
 <style scoped>
 .KnowledgeWarning{
   width: 50%;
-  position: absolute;
-  left: 50%;
-  height: 50%;
+  height: 100%;
 }
 .zscqqqyj-box {
-    height: 50%;
+    height: 100%;
+    width: 100%;
 }
 
 .zscqqqyj-box {
-    /* display: flex;
-    flex-direction: column;
-    position: relative; */
-    padding: 0 20px 20px;
+    padding: 0 0 20px 0;
     box-sizing: border-box;
 }
 
@@ -106,16 +102,12 @@ const viewObj = reactive({
 }
 
 .zscqqqyj-content-box {
-    /* flex: 1; */
-    /* display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(3, 1fr); */
     gap: 7px;
     margin-top: 14px;
     display: flex;
     flex-wrap: wrap;
     height:  calc(100% - 40px);
-    /* width: 100%; */
+    width: 100%;
 }
 
 .zscqqqyj-content-item {
@@ -132,17 +124,10 @@ const viewObj = reactive({
     background: #071b3c;
 }
 
-/* .zscqqqyj-content-box .zscqqqyj-content-item:nth-child(2n) {
-    padding-left: 10px;
-} */
-
 .zscqqqyj-content-item-icon {
     width: 32px;
     height: 32px;
 }
-/* .zscqqqyj-content-item{
-    width: 150px;
-} */
 .zscqqqyj-content-item-content {
     flex: 1;
     display: flex;
@@ -172,9 +157,4 @@ const viewObj = reactive({
     -webkit-text-fill-color: transparent;
 }
 
-.zscqqqyj-content-box .zscqqqyj-content-item:nth-child(n+4) .number-font {
-    background-image: -webkit-linear-gradient(top, #FFAF12, #FFB359);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
 </style>

@@ -5,11 +5,14 @@
     </div>
     <div class="box_min"></div>
     <div class="box_right">
-      <div style="display: flex">
+      <div style="height: 40%;width: 100%">
+        <div style="display: flex;height: 100%;width: 100%">
           <keyEnterprises></keyEnterprises>
           <knowledgeWarning></knowledgeWarning>
+        </div>
+
       </div>
-      <div style="height: 50%">
+      <div style="height: 60%">
         <enterpriseServices></enterpriseServices>
         <projectSubsidize></projectSubsidize>
       </div>
